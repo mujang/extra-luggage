@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{%block content%}
+<h1>Welcom traveler</h1>
+<form enctype="multipart/form-data" method="POST">
+    <label for="airport">Departure</label>
+   <input list="airports" name="airport">
+   <datalist id="airports">
+       <option value="a1">a1</option>
+       <option value="a2">a2</option>
+       <option value="a3">a3</option>
+   </datalist>
+   <label for="datetime">Depature Date and Time</label>
+   <input type="datetime-local" id="datetime" name="datetime">
+   <label for="airport">Arrival</label>
+   <input list="airports" name="airport">
+   <datalist id="airports">
+       <option value="a1">a1</option>
+       <option value="a2">a2</option>
+       <option value="a3">a3</option>
+   </datalist>
+   <label for="datetime">Arival Date and Time</label>
+   <input type="datetime-local" id="datetime" name="datetime">
+   <label for="img">Select Itineray</label>
+   <input type="file" id="img" name="img" accept="image/*">
+   <p><button type="submit">upload your flight itineray</button>
+   </p> 
+
+</form>
+
+{%endblock%}

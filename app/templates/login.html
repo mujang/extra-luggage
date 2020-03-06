@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+    </style>
+{% endblock %}
+{% block content %}
+    <h1>Please Login below to enjoy our service</h1>
+    <p class="important">
+      Welcome to Extralugage.
+    </p>
+    <form class="modal-content animate" method="post">
+        <input type="text" placeholder="enter username" name="uname" required>
+        <input type="password" placeholder="enter password" name="psw" required>
+        <button type="submit">login</button>
+    </form>
+    <p >If you dont have an account you can register by clicking <a href="{{url_for('register')}}">Here</a> </p>
+{% endblock %}
